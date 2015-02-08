@@ -1,0 +1,17 @@
+{
+    "name": "gertt/grav-plugin-embed",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gert",
+            "email": "gert@gert.gert"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Gertt\\Grav\\Embed\\": "src/"
+        }
+    }
+}
