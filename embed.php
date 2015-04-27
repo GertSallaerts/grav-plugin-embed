@@ -15,13 +15,13 @@ class EmbedPlugin extends Plugin
     public function onPluginsInitialized()
     {
         $autoload = __DIR__ . '/vendor/autoload.php';
-        
+
         if (!is_file($autoload)) {
             $this->grav['log']->error('Embed Plugin failed to load. Composer dependencies not met.');
         }
 
         require_once $autoload;
-        
+
         $this->grav['assets']->addInlineCss('.gist table { table-layout: auto; }');
 
         $this->enable([
@@ -70,7 +70,7 @@ class EmbedPlugin extends Plugin
     public function onTwigPageVariables()
     {
         $url = $_POST['url'];
-        
+
         $markup = $this->embed($url, $url);
 
         $twig = $this->grav['twig'];
